@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import Cardapio
+from .models import Prato
 
-@admin.register(Cardapio)
-class CardapioAdmin(admin.ModelAdmin):
-    list_display = ('nome','ingrediente','preco', 'ativo', 'modificado')
+@admin.register(Prato)
+class PratoAdmin(admin.ModelAdmin):
+    list_display = ('nome','ingrediente','preco', 'ativo', 'modificado', 'imagem')
