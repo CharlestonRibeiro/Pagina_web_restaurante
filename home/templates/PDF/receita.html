@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste</title>
+</head>
+<body>
+     <section class="probootstrap-section">
+      <div class="container">
+        <div class="row">
+
+
+          {% for r in receitas %}
+          <div class="col-md-4 col-sm-4 probootstrap-animate">
+            <div class="probootstrap-block-image">
+              <figure><img src="{{ r.imagem.thumb.url }}" alt="{{ r.nome }}"></figure>
+              <div class="text">
+                <h3><a href="#">{{ r.nome }}</a></h3>
+                <p>{{ r.ingrediente }}</p>
+                  <br>
+                <p>{{ r.preparo }}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+
+        </div>
+      </div>
+    </section>
+</body>
+</html>

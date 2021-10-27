@@ -1,9 +1,11 @@
 from django.urls import reverse_lazy
-from django.views.generic import FormView
+from django.views.generic import FormView, View
 from django.contrib import messages
 
-from .models import Prato
+from .models import Prato, Receita
 from .forms import ContatoForm
+from .utils import GeraPDFMixin
+
 
 class IndexView(FormView):
     template_name = 'index.html'
@@ -25,3 +27,17 @@ class IndexView(FormView):
     def form_invalid(self, form, *args, **kwargs):
         messages.error(self.request, 'Erro ao enviar e-mail')
         return super(IndexView, self).form_invalid(form,*args, **kwargs)
+
+
+############# PDF ###############
+
+class ReceitaPDFView(View, GeraPDFMixin):
+    def get(self, request, *args, **kwargs):
+        receitas = Receita.objects.all()
+        dados = {
+            'receitas': receitas,
+        }
+        pdf = GeraPDFMixin()
+        return pdf.reder_to_pdf('PDF/receita.html',dados)
+
+

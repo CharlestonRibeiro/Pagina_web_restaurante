@@ -23,3 +23,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+#alterando os nome do admin
+admin.site.site_header = 'Panelinha' #cabeçalho
+admin.site.site_title = 'Seu delivery de comida saudável' #titulo da pagina
+admin.site.index_title = 'Sistema de Gerenciamento' #titulo da pagina index
+

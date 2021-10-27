@@ -29,7 +29,15 @@ class Prato(Base):
     def __str__(self):
         return self.nome
 
+class Receita(Base):
+    nome = models.CharField('Nome', max_length=100)
+    ingrediente = models.CharField('Ingrediente', max_length=500)
+    preparo = models.CharField('Preparo', max_length=5000)
+    imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': {'width': 700, 'height': 700, 'crop': True}})
 
+    class Meta:
+        verbose_name = 'Receita'
+        verbose_name_plural = 'Receitas'
 
-
-
+    def __str__(self):
+        return self.nome
