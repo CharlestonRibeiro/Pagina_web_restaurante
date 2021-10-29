@@ -1,32 +1,49 @@
+{% load bootstrap4 %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Teste</title>
+    <meta name="viewport" content="width=device-width, initial-scale-1, shrindk-to-fit=no">
+    {% bootstrap_css %}
+    <title>Receita</title>
 </head>
-<body>
-     <section class="probootstrap-section">
-      <div class="container">
-        <div class="row">
+    <body>
 
+        <div class="container">
+            <h1>Receitas</h1>
 
-          {% for r in receitas %}
-          <div class="col-md-4 col-sm-4 probootstrap-animate">
-            <div class="probootstrap-block-image">
-              <figure><img src="{{ r.imagem.thumb.url }}" alt="{{ r.nome }}"></figure>
-              <div class="text">
-                <h3><a href="#">{{ r.nome }}</a></h3>
-                <p>{{ r.ingrediente }}</p>
-                  <br>
-                <p>{{ r.preparo }}</p>
-              </div>
+            <div class="row">
+                <div class="col-sm-6">
+                <form action="." method="GET" class="form-inline" >
+                    <input type="text" id="search" name="search" class="form-control" placeholder="Buscar">
+                    <input type="submit" class="btn btn-primary" style="margin-left: 10px;" value="Pesquisar">
+                </form>
+                </div>
             </div>
-          </div>
-          {% endfor %}
+            <br>
 
-
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Ingredientes</th>
+                        <th scope="col">Modo de Preparo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for r in receitas %}
+                        <tr>
+                            <td scope="row">{{r.nome}}</td>
+                            <td scope="row">{{r.ingrediente}}</td>
+                            <td scope="row">{{r.preparo}}</td>
+                            <br>
+                            <br>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
-      </div>
-    </section>
-</body>
+{% bootstrap_javascript jquery='full' %}
+    </body>
 </html>

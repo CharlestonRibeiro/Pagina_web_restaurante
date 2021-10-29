@@ -2,21 +2,41 @@
 {% load static %}
 {% block content %}
 
-  {% include 'welcome.html' %}
+  {% if user.is_anonymous %}
 
-  {% include 'ourStore.html' %}
+    {% include 'welcome.html' %}
 
-  {% include 'specialties.html'%}
+    {% include 'ourStore.html' %}
 
-  {% include 'menu.html'%}
+    {% include 'specialties.html'%}
 
-  {% include 'reservation.html'%}
+    {% include 'menu.html'%}
 
-  {% include 'events.html'%}
+    {% include 'events.html'%}
 
-  {% include 'contact.html'%}
+    {% include 'contact.html'%}
 
-  {% include 'rodape.html'%}
+    {% include 'rodape.html'%}
+
+  {% else %}
+
+    {% include 'welcome.html' %}
+
+    {% include 'teste.html' %}
+
+    {% include 'ourStore.html' %}
+
+    {% include 'specialties.html'%}
+
+    {% include 'menu.html'%}
+
+    {% include 'events.html'%}
+
+    {% include 'contact.html'%}
+
+    {% include 'rodape.html'%}
+
+  {% endif %}
 
 
 {% endblock%}

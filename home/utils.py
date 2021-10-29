@@ -11,7 +11,7 @@ class GeraPDFMixin:
         html = template.render(context_dict)
         result = BytesIO()
         try:
-            pdf = pisa.pisaDocument(BytesIO(html.encode("")), result)
+            pdf = pisa.pisaDocument(BytesIO(html.encode("utf-8")), result)
             return HttpResponse(result.getvalue(), content_type='application/pdf')
         except Exception as e:
             print(e)

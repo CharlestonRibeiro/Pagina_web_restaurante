@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'home',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -147,6 +148,5 @@ EMAIL_HOST_PASSWORD = 'aluno'
 DEFAULT_FROM_EMAIL = 'contato@panelinha.com.br'
 """
 
-LOGOUT_REDIRECT_URL = 'index'
-
+#LOGOUT_REDIRECT_URL = 'index'
 
