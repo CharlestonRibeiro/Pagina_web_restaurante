@@ -48,5 +48,31 @@
           </div>
         </div>
       </div>
+      </div>
     </section>
+
+
+      <br>
+
+<!--
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        $(document).ready(function(){
+            {% block domready %}
+
+          <div className="container">
+            {% if messages %}
+            {% for m in messages %}
+            <div className="alert alert-danger {{ m.tags }}">
+              <button type="button" className="close" data-dismiss="alert"></button>
+              <strong>{{m}}</strong>
+            </div>
+            {% endfor %}
+            {% endif %}
+          </div>
+
+            {% endblock %}
+        });
+    </script>
+
+-->
 

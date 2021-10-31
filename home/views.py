@@ -1,8 +1,9 @@
+from braces.views import JsonRequestResponseMixin
 from django.urls import reverse_lazy
 from django.views.generic import FormView, View
 from django.contrib import messages
 
-from .models import Prato, Receita
+from .models import Prato, Receita, Atividade
 from .forms import ContatoForm
 from .utils import GeraPDFMixin
 
@@ -16,6 +17,7 @@ class IndexView(FormView):
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
         context['pratos'] = Prato.objects.all()# .order_by('?').all() -Usar caso queira embaralhar como os icones aparecer na tela
+        context['atividades'] = Atividade.objects.all()
         return context
 
     def form_valid(self, form, *args, **kwargs):
