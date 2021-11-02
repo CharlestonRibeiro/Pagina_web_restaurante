@@ -4,35 +4,43 @@
 
   {% if user.is_anonymous %}
 
-    {% include 'welcome.html' %}
+    {% include 'base.html' %}
 
-    {% include 'ourStore.html' %}
+    {% include 'inicio.html' %}
 
-    {% include 'specialties.html'%}
+    {% include 'Sobre_nos.html' %}
 
-    {% include 'menu.html'%}
+    {% include 'cardapio.html'%}
 
-    {% include 'events.html'%}
+    {% include 'receitas_em_pdf.html'%}
 
-    {% include 'contact.html'%}
+    {% include 'pedidos.html' %}
+
+    {% include 'depoimentos.html'%}
+
+    {% include 'contato.html'%}
 
     {% include 'rodape.html'%}
 
   {% else %}
 
-    {% include 'welcome.html' %}
+    {% include 'base_logado.html' %}
 
-    {% include 'teste.html' %}
+    {% include 'inicio.html' %}
 
-    {% include 'ourStore.html' %}
+    {% include 'painel.html' %}
 
-    {% include 'specialties.html'%}
+    {% include 'Sobre_nos.html' %}
 
-    {% include 'menu.html'%}
+    {% include 'cardapio.html'%}
 
-    {% include 'events.html'%}
+    {% include 'receitas_em_pdf.html'%}
 
-    {% include 'contact.html'%}
+    {% include 'pedidos.html' %}
+
+    {% include 'depoimentos.html'%}
+
+    {% include 'contato.html'%}
 
     {% include 'rodape.html'%}
 
