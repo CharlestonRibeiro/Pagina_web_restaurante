@@ -275,9 +275,9 @@ a {
 			background-position: left 100%;
 		}
 		@media screen and (max-width: $screen-xs) {
-			top: 6px!important;	
+			top: 6px!important;
 		}
-		
+
 		// retina logo
 		@media
 		only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -285,7 +285,7 @@ a {
 		only screen and (     -o-min-device-pixel-ratio: 2/1),
 		only screen and (        min-device-pixel-ratio: 2),
 		only screen and (                min-resolution: 192dpi),
-		only screen and (                min-resolution: 2dppx) { 
+		only screen and (                min-resolution: 2dppx) {
 			position: relative;
 	  	width: 117px;
 			height: 40px;

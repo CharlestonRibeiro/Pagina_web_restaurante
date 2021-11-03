@@ -1,7 +1,7 @@
 {% load static %}
 
 
- <section class="probootstrap-section-bg overlay" style="background-image: url({% static 'img/hero_bg_4.jpg' %});"  data-stellar-background-ratio="0.5" data-section="events">
+ <section class="probootstrap-section-bg overlay" style="background-image: url({% static 'img/hero_bg_4.jfif' %});"  data-stellar-background-ratio="0.5" data-section="cardapio">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center probootstrap-animate">
@@ -19,7 +19,7 @@
 
 
           {% for p in pratos %}
-          <div class="col-md-4 col-sm-4 probootstrap-animate">
+          <div class="col-lg-4 col-md-6 probootstrap-animate">
             <div class="probootstrap-block-image">
               <figure><img src="{{ p.imagem.thumb.url }}" alt="{{ p.nome }}"></figure>
               <div class="text">
@@ -30,14 +30,6 @@
             </div>
           </div>
           {% endfor %}
-
-
-
-
         </div>
       </div>
-             <div class="text-center">
-                 <h3><p> ahbfgvuoisdyvbosdufvbyiutyed </p></h3>
-                <a class="btn btn-lg btn-primary " href="receitas/">teste</a>
-            </div>
     </section>
