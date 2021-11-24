@@ -4,6 +4,7 @@ beautifulsoup4==4.10.0
 Brotli==1.0.9
 cffi==1.15.0
 cssselect2==0.4.1
+dj-database-url==0.5.0
 dj-static==0.0.6
 Django==3.2.7
 django-bootstrap4==3.0.1

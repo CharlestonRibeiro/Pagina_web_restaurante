@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-c5@rgd4a&8%3ogy+mw@*r$##os_u8_)2r1i-0yl#chc6wd2ny&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -75,7 +76,7 @@ WSGI_APPLICATION = 'restaurante.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -85,6 +86,11 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT':'5433',
     }
+}
+'''
+
+DATABASES = {
+    'default': dj_database_url.config()
 }
 
 
@@ -137,7 +143,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Email teste console
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-"""
 # Email produção
 
 EMAIL_HOST = 'localhost'
@@ -146,7 +151,11 @@ EMAIL_PORT = 587
 EMAIL_USE_TSL = True
 EMAIL_HOST_PASSWORD = 'aluno'
 DEFAULT_FROM_EMAIL = 'contato@panelinha.com.br'
-"""
 
-#LOGOUT_REDIRECT_URL = 'index'
+
+#Email para desenvolvimento
+"""
+#LOGOUT_REDIRECT_URL = 'index'  
+"""
+LOGOUT_REDIRECT_URL = 'index'
 
