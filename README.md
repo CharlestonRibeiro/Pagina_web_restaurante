@@ -3,7 +3,7 @@ Pagina web desenvolvida para a disciplina de programação usando os principais 
 
 # Panelinha Restaurante 
 
-##Seu melhor delivery de comida saudável 
+Seu melhor delivery de comida saudável 
 
 ---
 <div align="center">
@@ -14,10 +14,8 @@ Pagina web desenvolvida para a disciplina de programação usando os principais 
 <strong>ALIMENTAÇÃO SAUDÁVEL E SEUS BENEFÍCIOS</strong>
 
 Para manter o funcionamento do organismo todo ser vivo precisa de uma alimentação equilibrada, comer é <i>fundamental</i> para a 
-
 sobrevivência. E comer bem e corretamente é essencial para uma boa qualidade de vida. A alimentação saudável traz benefícios 
-
-para a saúde como melhor: 
+para a saúde como: 
 
 - [x] Controle do peso 
 
@@ -36,7 +34,7 @@ Tabela
 |  outros     |    15 reais     |
 
 ----------
-Veja tambem algumas receitas saudáveis para seu dia a dia:
+Veja tambem algumas receitas saudáveis para seu dia a dia.
 
 <div align="center">
   <a href="https://www.receiteria.com.br/receitas-de-comida-saudavel/">Receitas</a>
